@@ -19,5 +19,11 @@
 @dynamic date;
 @dynamic price;
 @dynamic code;
+@dynamic k;
+@dynamic d;
+@dynamic j;
+@dynamic rsi6;
+@dynamic rsi12;
+@dynamic rsi24;
 
 @end

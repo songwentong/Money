@@ -21,6 +21,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSDate *date;
 @property (nullable, nonatomic, retain) NSNumber *price;
 @property (nullable, nonatomic, retain) NSNumber *code;
+@property (nullable, nonatomic, retain) NSNumber *k;
+@property (nullable, nonatomic, retain) NSNumber *d;
+@property (nullable, nonatomic, retain) NSNumber *j;
+@property (nullable, nonatomic, retain) NSNumber *rsi6;
+@property (nullable, nonatomic, retain) NSNumber *rsi12;
+@property (nullable, nonatomic, retain) NSNumber *rsi24;
 
 @end
 
