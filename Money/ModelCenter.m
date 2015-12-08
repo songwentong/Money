@@ -12,6 +12,7 @@
 @import CoreData;
 
 #import "Stock.h"
+#import "DetailInfo.h"
 @implementation ModelCenter
 static ModelCenter *center = nil;
 +(instancetype)sharedModelCenter{
@@ -36,8 +37,8 @@ static ModelCenter *center = nil;
 }
 
 /*!
-    关于数据抓取
-    目前抓取的全是日K线,包括MACD,MA,KDJ和RSI
+ 关于数据抓取
+ 目前抓取的全是日K线,包括MACD,MA,KDJ和RSI
  */
 
 -(void)daliyUpdate
@@ -47,14 +48,14 @@ static ModelCenter *center = nil;
     [formatter setDateFormat:@"yyyy-MM-dd"];
     NSString *string = [formatter stringFromDate:date];
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
-    if (![standardUserDefaults boolForKey:string]) {
-        
+//    if (![standardUserDefaults boolForKey:string]) {
+    
         [self updateAllDataWithComplection:^{
             [standardUserDefaults setBool:YES forKey:string];
             [standardUserDefaults synchronize];
         }];
         
-    }
+//    }
 }
 
 
@@ -62,6 +63,7 @@ static ModelCenter *center = nil;
 -(void)updateAllDataWithComplection:(dispatch_block_t)complection
 {
     [self findMACDAndComplection:^{
+        /*
         [self findKDJAndComplection:^{
             [self findRSIAndComplection:^{
                 if (complection) {
@@ -69,6 +71,7 @@ static ModelCenter *center = nil;
                 }
             }];
         }];
+         */
     }];
     
     
@@ -76,9 +79,11 @@ static ModelCenter *center = nil;
 
 -(void)findMACDAndComplection:(dispatch_block_t)complection
 {
+    NSTimeInterval time1 = [[NSDate date] timeIntervalSince1970];
+    
     NSMutableArray * _array = [[NSMutableArray alloc] init];
     // Do any additional setup after loading the view, typically from a nib.
-    NSString *url = @"http://proxy.finance.qq.com/ifzqgtimg/appstock/indicators/MACD/W1";
+    NSString *url = @"http://proxy.finance.qq.com/ifzqgtimg/appstock/indicators/MACD/D1";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     [parameters setValue:@"SZ" forKey:@"market"];
     [parameters setValue:@"12-26-9" forKey:@"args"];
@@ -86,7 +91,7 @@ static ModelCenter *center = nil;
     //    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     //    [formatter setDateFormat:@""];
     NSArray *szCodes = [[self class] readSZCode];
-    //    szCodes = [szCodes subarrayWithRange:NSMakeRange(0, 10)];
+//        szCodes = [szCodes subarrayWithRange:NSMakeRange(0, 10)];
     //    NSLog(@"%@",szCodes);
     
     NSInteger count = szCodes.count;
@@ -122,59 +127,71 @@ static ModelCenter *center = nil;
                 //解决在并发情况下的重复调用问题
                 static dispatch_once_t onceToken;
                 dispatch_once(&onceToken, ^{
-                    
-                    [_array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                        NSArray *data = [obj valueForKey:@"data"];
-                        if (data.count>2) {
-                            NSDictionary *firstObject = [data firstObject];
-                            NSDictionary *lastObject = [data lastObject];
-                            
-                            
-                            NSInteger code = [[firstObject valueForKey:@"code"] integerValue];
-                            CGFloat MACD = [[lastObject valueForKey:@"MACD"] floatValue];
-                            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                                NSManagedObjectContext *context = [AppDelegate sharedDelegate].managedObjectContext;
+                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                        NSManagedObjectContext *context = [AppDelegate sharedDelegate].managedObjectContext;
+                        
+                        
+                        [_array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                            NSArray *data = [obj valueForKey:@"data"];
+                            if (data.count>2) {
+                                
+                                __block NSInteger code = 0;
+                                [data enumerateObjectsUsingBlock:^(NSDictionary *obj1, NSUInteger idx, BOOL * _Nonnull stop) {
+                                    if (idx ==0) {
+                                        code = [[obj1 valueForKey:@"code"] integerValue];
+                                    }else{
+                                        CGFloat macd = [[obj1 valueForKey:@"MACD"] floatValue];
+                                        CGFloat dea = [[obj1 valueForKey:@"DEA"] floatValue];
+                                        CGFloat dif = [[obj1 valueForKey:@"DIF"] floatValue];
+                                        NSString *date = [obj1 valueForKey:@"DATE"];
+                                        
+                                        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"DetailInfo"];
+                                        request.predicate = [NSPredicate predicateWithFormat:@"code == %ld AND date == %@ ",code,date];
+                                        
+                                        NSError *error = nil;
+                                        NSArray *results = [context executeFetchRequest:request error:&error];
+                                        
+                                        //如果找到了对应的数据,就修改,没有找到了,就插入一条新数据
+                                        DetailInfo *detailInfo = nil;
+                                        if (results.count>0) {
+                                            
+                                            detailInfo = results.lastObject;
+                                            //                                NSLog(@"%@",NSStringFromClass([stock class]));
+                                        }else{
+                                            detailInfo = [NSEntityDescription insertNewObjectForEntityForName:@"DetailInfo" inManagedObjectContext:context];
+                                            detailInfo.date = date;
+                                            detailInfo.code = [NSNumber numberWithInteger:code];
+                                        }
+                                        detailInfo.dea = [NSNumber numberWithFloat:dea];
+                                        detailInfo.diff = [NSNumber numberWithFloat:dif];
+                                        detailInfo.macd = [NSNumber numberWithFloat:macd];
+
+                                        
+                                        
+                                        
+                                    }
+                                }];
                                 
                                 
-                                NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Stock"];
-                                request.predicate = [NSPredicate predicateWithFormat:@"code == %ld",code];
-                                //                            request.sortDescriptors =
-                                NSError *error = nil;
-                                NSArray *results = [context executeFetchRequest:request error:&error];
                                 
-                                //如果找到了对应的数据,就修改,没有找到了,就插入一条新数据
-                                Stock *stock = nil;
-                                if (results.count>0) {
-                                    
-                                    stock = results.lastObject;
-                                    //                                NSLog(@"%@",NSStringFromClass([stock class]));
-                                }else{
-                                    stock = [NSEntityDescription insertNewObjectForEntityForName:@"Stock" inManagedObjectContext:context];
-                                    
-                                }
-                                stock.code = [NSNumber numberWithInteger:code];
-                                stock.macd = [NSNumber numberWithFloat:MACD];
-                                
-                                
-                                if ([context save:nil]) {
-                                    
-                                }
-                                
-                                if (complection) {
-                                    complection();
-                                }
-                                
-                            }];
-                            
-                            
-                            
+                            }
+                        }];
+                        if ([context save:nil]) {
+                            NSLog(@"保存成功");
+                        }else{
+                            NSLog(@"保存失败");
                         }
                         
-                        if (idx==_array.count-1) {
-                            NSLog(@"%@",NSHomeDirectory());
-//                            NSArray<NSString *> *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-//                            NSLog(@"%@",path);
+                        if (complection) {
+                            complection();
+                            NSTimeInterval time2 = [[NSDate date] timeIntervalSince1970];
+                            NSLog(@"查找MACD用时 %f",time2-time1);
                         }
+                        
+                        
+                        NSLog(@"%@",NSHomeDirectory());
+                            
+                        
                         
                     }];
                     
@@ -187,6 +204,7 @@ static ModelCenter *center = nil;
             }
         }] resume];
     }];
+    
     
 }
 

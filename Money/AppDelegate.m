@@ -29,7 +29,7 @@
     
 //    }];
     [[ModelCenter sharedModelCenter] daliyUpdate];
-    [[ModelCenter sharedModelCenter] analysis];
+//    [[ModelCenter sharedModelCenter] analysis];
     return YES;
 }
 
