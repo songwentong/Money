@@ -21,8 +21,8 @@
 		E15A1C461C16A42B00ED204D /* Forecast+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E15A1C3F1C16A42B00ED204D /* Forecast+CoreDataProperties.m */; };
 		E15A1C471C16A42B00ED204D /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = E15A1C411C16A42B00ED204D /* Forecast.m */; };
 		E1B2D8F01C16B58D00A9E9CC /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B2D8EF1C16B58D00A9E9CC /* CoreDataManager.m */; };
-		E1B2D9071C16BDA600A9E9CC /* MaAndPrice+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B2D9041C16BDA600A9E9CC /* MaAndPrice+CoreDataProperties.m */; };
-		E1B2D9081C16BDA600A9E9CC /* MaAndPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B2D9061C16BDA600A9E9CC /* MaAndPrice.m */; };
+		E1B2D9251C16BFCD00A9E9CC /* DetailInfo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B2D9221C16BFCD00A9E9CC /* DetailInfo+CoreDataProperties.m */; };
+		E1B2D9261C16BFCD00A9E9CC /* DetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B2D9241C16BFCD00A9E9CC /* DetailInfo.m */; };
 		E1E417921C156851004D60B3 /* code.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1E417911C156851004D60B3 /* code.plist */; };
 /* End PBXBuildFile section */
 
@@ -52,10 +52,10 @@
 		E15A1C411C16A42B00ED204D /* Forecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Forecast.m; sourceTree = "<group>"; };
 		E1B2D8EE1C16B58D00A9E9CC /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		E1B2D8EF1C16B58D00A9E9CC /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
-		E1B2D9031C16BDA600A9E9CC /* MaAndPrice+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MaAndPrice+CoreDataProperties.h"; path = "../MaAndPrice+CoreDataProperties.h"; sourceTree = "<group>"; };
-		E1B2D9041C16BDA600A9E9CC /* MaAndPrice+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MaAndPrice+CoreDataProperties.m"; path = "../MaAndPrice+CoreDataProperties.m"; sourceTree = "<group>"; };
-		E1B2D9051C16BDA600A9E9CC /* MaAndPrice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaAndPrice.h; path = ../MaAndPrice.h; sourceTree = "<group>"; };
-		E1B2D9061C16BDA600A9E9CC /* MaAndPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaAndPrice.m; path = ../MaAndPrice.m; sourceTree = "<group>"; };
+		E1B2D9211C16BFCD00A9E9CC /* DetailInfo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DetailInfo+CoreDataProperties.h"; path = "../../DetailInfo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E1B2D9221C16BFCD00A9E9CC /* DetailInfo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DetailInfo+CoreDataProperties.m"; path = "../../DetailInfo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E1B2D9231C16BFCD00A9E9CC /* DetailInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailInfo.h; path = ../../DetailInfo.h; sourceTree = "<group>"; };
+		E1B2D9241C16BFCD00A9E9CC /* DetailInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailInfo.m; path = ../../DetailInfo.m; sourceTree = "<group>"; };
 		E1E417911C156851004D60B3 /* code.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = code.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,10 +122,10 @@
 		E1E417B11C158ED6004D60B3 /* CoreDataModel */ = {
 			isa = PBXGroup;
 			children = (
-				E1B2D9031C16BDA600A9E9CC /* MaAndPrice+CoreDataProperties.h */,
-				E1B2D9041C16BDA600A9E9CC /* MaAndPrice+CoreDataProperties.m */,
-				E1B2D9051C16BDA600A9E9CC /* MaAndPrice.h */,
-				E1B2D9061C16BDA600A9E9CC /* MaAndPrice.m */,
+				E1B2D9211C16BFCD00A9E9CC /* DetailInfo+CoreDataProperties.h */,
+				E1B2D9221C16BFCD00A9E9CC /* DetailInfo+CoreDataProperties.m */,
+				E1B2D9231C16BFCD00A9E9CC /* DetailInfo.h */,
+				E1B2D9241C16BFCD00A9E9CC /* DetailInfo.m */,
 				E15A1C3A1C16A42B00ED204D /* Stock+CoreDataProperties.h */,
 				E15A1C3B1C16A42B00ED204D /* Stock+CoreDataProperties.m */,
 				E15A1C3C1C16A42B00ED204D /* Stock.h */,
@@ -209,16 +209,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B2D9261C16BFCD00A9E9CC /* DetailInfo.m in Sources */,
 				E15A1C471C16A42B00ED204D /* Forecast.m in Sources */,
-				E1B2D9081C16BDA600A9E9CC /* MaAndPrice.m in Sources */,
 				E11241D31C1550BD008E45CA /* ModelCenter.m in Sources */,
 				E103681B1C11D65E003FE18C /* ViewController.m in Sources */,
-				E1B2D9071C16BDA600A9E9CC /* MaAndPrice+CoreDataProperties.m in Sources */,
 				E15A1C451C16A42B00ED204D /* Stock.m in Sources */,
 				E10368181C11D65E003FE18C /* AppDelegate.m in Sources */,
 				E1B2D8F01C16B58D00A9E9CC /* CoreDataManager.m in Sources */,
 				E10368211C11D65E003FE18C /* Money.xcdatamodeld in Sources */,
 				E15A1C441C16A42B00ED204D /* Stock+CoreDataProperties.m in Sources */,
+				E1B2D9251C16BFCD00A9E9CC /* DetailInfo+CoreDataProperties.m in Sources */,
 				E10368151C11D65E003FE18C /* main.m in Sources */,
 				E15A1C461C16A42B00ED204D /* Forecast+CoreDataProperties.m in Sources */,
 				E103682F1C11D6C4003FE18C /* WTNetWorkManager.m in Sources */,

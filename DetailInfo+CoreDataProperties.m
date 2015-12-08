@@ -1,5 +1,5 @@
 //
-//  MaAndPrice+CoreDataProperties.m
+//  DetailInfo+CoreDataProperties.m
 //  Money
 //
 //  Created by SongWentong on 12/8/15.
@@ -9,19 +9,19 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "MaAndPrice+CoreDataProperties.h"
+#import "DetailInfo+CoreDataProperties.h"
 
-@implementation MaAndPrice (CoreDataProperties)
+@implementation DetailInfo (CoreDataProperties)
 
+@dynamic code;
+@dynamic d;
+@dynamic date;
+@dynamic j;
+@dynamic k;
 @dynamic ma5;
 @dynamic ma10;
 @dynamic ma20;
-@dynamic date;
 @dynamic price;
-@dynamic code;
-@dynamic k;
-@dynamic d;
-@dynamic j;
 @dynamic rsi6;
 @dynamic rsi12;
 @dynamic rsi24;

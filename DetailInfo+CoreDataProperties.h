@@ -1,5 +1,5 @@
 //
-//  MaAndPrice+CoreDataProperties.h
+//  DetailInfo+CoreDataProperties.h
 //  Money
 //
 //  Created by SongWentong on 12/8/15.
@@ -9,21 +9,21 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "MaAndPrice.h"
+#import "DetailInfo.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MaAndPrice (CoreDataProperties)
+@interface DetailInfo (CoreDataProperties)
 
+@property (nullable, nonatomic, retain) NSNumber *code;
+@property (nullable, nonatomic, retain) NSNumber *d;
+@property (nullable, nonatomic, retain) NSDate *date;
+@property (nullable, nonatomic, retain) NSNumber *j;
+@property (nullable, nonatomic, retain) NSNumber *k;
 @property (nullable, nonatomic, retain) NSNumber *ma5;
 @property (nullable, nonatomic, retain) NSNumber *ma10;
 @property (nullable, nonatomic, retain) NSNumber *ma20;
-@property (nullable, nonatomic, retain) NSDate *date;
 @property (nullable, nonatomic, retain) NSNumber *price;
-@property (nullable, nonatomic, retain) NSNumber *code;
-@property (nullable, nonatomic, retain) NSNumber *k;
-@property (nullable, nonatomic, retain) NSNumber *d;
-@property (nullable, nonatomic, retain) NSNumber *j;
 @property (nullable, nonatomic, retain) NSNumber *rsi6;
 @property (nullable, nonatomic, retain) NSNumber *rsi12;
 @property (nullable, nonatomic, retain) NSNumber *rsi24;

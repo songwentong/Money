@@ -1,5 +1,5 @@
 //
-//  MaAndPrice.h
+//  DetailInfo.h
 //  Money
 //
 //  Created by SongWentong on 12/8/15.
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MaAndPrice : NSManagedObject
+@interface DetailInfo : NSManagedObject
 
 // Insert code here to declare functionality of your managed object subclass
 
@@ -19,4 +19,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 NS_ASSUME_NONNULL_END
 
-#import "MaAndPrice+CoreDataProperties.h"
+#import "DetailInfo+CoreDataProperties.h"
