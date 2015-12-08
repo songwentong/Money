@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSNumber *success;
 @property (nullable, nonatomic, retain) NSDate *forecastTime;
 @property (nullable, nonatomic, retain) NSNumber *reviewPrice;
-@property (nullable, nonatomic, retain) NSNumber *forecastscore;
+@property (nullable, nonatomic, retain) NSNumber *forecastScore;
 @property (nullable, nonatomic, retain) NSNumber *reviewTime;
 @property (nullable, nonatomic, retain) NSNumber *forecastPrice;
 

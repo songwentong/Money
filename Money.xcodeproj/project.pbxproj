@@ -25,8 +25,8 @@
 		E1B2D92F1C16C15C00A9E9CC /* RSI in Resources */ = {isa = PBXBuildFile; fileRef = E1B2D92E1C16C15C00A9E9CC /* RSI */; };
 		E1B2D93E1C16E1C400A9E9CC /* DetailInfo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B2D93B1C16E1C400A9E9CC /* DetailInfo+CoreDataProperties.m */; };
 		E1B2D93F1C16E1C400A9E9CC /* DetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B2D93D1C16E1C400A9E9CC /* DetailInfo.m */; };
-		E1C798D91C170E40001FBDFE /* Forecast+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C798D61C170E40001FBDFE /* Forecast+CoreDataProperties.m */; };
-		E1C798DA1C170E40001FBDFE /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C798D81C170E40001FBDFE /* Forecast.m */; };
+		E1C798DF1C1711E1001FBDFE /* Forecast+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C798DC1C1711E1001FBDFE /* Forecast+CoreDataProperties.m */; };
+		E1C798E01C1711E1001FBDFE /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C798DE1C1711E1001FBDFE /* Forecast.m */; };
 		E1E417921C156851004D60B3 /* code.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1E417911C156851004D60B3 /* code.plist */; };
 /* End PBXBuildFile section */
 
@@ -60,10 +60,10 @@
 		E1B2D93B1C16E1C400A9E9CC /* DetailInfo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DetailInfo+CoreDataProperties.m"; sourceTree = "<group>"; };
 		E1B2D93C1C16E1C400A9E9CC /* DetailInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailInfo.h; sourceTree = "<group>"; };
 		E1B2D93D1C16E1C400A9E9CC /* DetailInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailInfo.m; sourceTree = "<group>"; };
-		E1C798D51C170E40001FBDFE /* Forecast+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Forecast+CoreDataProperties.h"; sourceTree = "<group>"; };
-		E1C798D61C170E40001FBDFE /* Forecast+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Forecast+CoreDataProperties.m"; sourceTree = "<group>"; };
-		E1C798D71C170E40001FBDFE /* Forecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Forecast.h; sourceTree = "<group>"; };
-		E1C798D81C170E40001FBDFE /* Forecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Forecast.m; sourceTree = "<group>"; };
+		E1C798DB1C1711E1001FBDFE /* Forecast+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Forecast+CoreDataProperties.h"; path = "../../Forecast+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E1C798DC1C1711E1001FBDFE /* Forecast+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Forecast+CoreDataProperties.m"; path = "../../Forecast+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E1C798DD1C1711E1001FBDFE /* Forecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Forecast.h; path = ../../Forecast.h; sourceTree = "<group>"; };
+		E1C798DE1C1711E1001FBDFE /* Forecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Forecast.m; path = ../../Forecast.m; sourceTree = "<group>"; };
 		E1E417911C156851004D60B3 /* code.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = code.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,10 +166,10 @@
 		E1E417B11C158ED6004D60B3 /* CoreDataModel */ = {
 			isa = PBXGroup;
 			children = (
-				E1C798D51C170E40001FBDFE /* Forecast+CoreDataProperties.h */,
-				E1C798D61C170E40001FBDFE /* Forecast+CoreDataProperties.m */,
-				E1C798D71C170E40001FBDFE /* Forecast.h */,
-				E1C798D81C170E40001FBDFE /* Forecast.m */,
+				E1C798DB1C1711E1001FBDFE /* Forecast+CoreDataProperties.h */,
+				E1C798DC1C1711E1001FBDFE /* Forecast+CoreDataProperties.m */,
+				E1C798DD1C1711E1001FBDFE /* Forecast.h */,
+				E1C798DE1C1711E1001FBDFE /* Forecast.m */,
 				E1B2D93A1C16E1C400A9E9CC /* DetailInfo+CoreDataProperties.h */,
 				E1B2D93B1C16E1C400A9E9CC /* DetailInfo+CoreDataProperties.m */,
 				E1B2D93C1C16E1C400A9E9CC /* DetailInfo.h */,
@@ -259,9 +259,9 @@
 			files = (
 				E1B2D93F1C16E1C400A9E9CC /* DetailInfo.m in Sources */,
 				E11241D31C1550BD008E45CA /* ModelCenter.m in Sources */,
-				E1C798D91C170E40001FBDFE /* Forecast+CoreDataProperties.m in Sources */,
+				E1C798DF1C1711E1001FBDFE /* Forecast+CoreDataProperties.m in Sources */,
 				E103681B1C11D65E003FE18C /* ViewController.m in Sources */,
-				E1C798DA1C170E40001FBDFE /* Forecast.m in Sources */,
+				E1C798E01C1711E1001FBDFE /* Forecast.m in Sources */,
 				E15A1C451C16A42B00ED204D /* Stock.m in Sources */,
 				E10368181C11D65E003FE18C /* AppDelegate.m in Sources */,
 				E1B2D8F01C16B58D00A9E9CC /* CoreDataManager.m in Sources */,

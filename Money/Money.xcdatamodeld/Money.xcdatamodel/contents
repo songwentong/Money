@@ -20,7 +20,7 @@
     <entity name="Forecast" representedClassName="Forecast" syncable="YES">
         <attribute name="code" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="forecastPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="forecastscore" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="forecastScore" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="forecastTime" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="reviewPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="reviewTime" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>

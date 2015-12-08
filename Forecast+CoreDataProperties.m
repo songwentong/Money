@@ -17,7 +17,7 @@
 @dynamic success;
 @dynamic forecastTime;
 @dynamic reviewPrice;
-@dynamic forecastscore;
+@dynamic forecastScore;
 @dynamic reviewTime;
 @dynamic forecastPrice;
 
