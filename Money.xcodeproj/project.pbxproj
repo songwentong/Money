@@ -18,8 +18,6 @@
 		E11241D31C1550BD008E45CA /* ModelCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = E11241D21C1550BD008E45CA /* ModelCenter.m */; };
 		E15A1C441C16A42B00ED204D /* Stock+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E15A1C3B1C16A42B00ED204D /* Stock+CoreDataProperties.m */; };
 		E15A1C451C16A42B00ED204D /* Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = E15A1C3D1C16A42B00ED204D /* Stock.m */; };
-		E15A1C461C16A42B00ED204D /* Forecast+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E15A1C3F1C16A42B00ED204D /* Forecast+CoreDataProperties.m */; };
-		E15A1C471C16A42B00ED204D /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = E15A1C411C16A42B00ED204D /* Forecast.m */; };
 		E1B2D8F01C16B58D00A9E9CC /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B2D8EF1C16B58D00A9E9CC /* CoreDataManager.m */; };
 		E1B2D9291C16C09F00A9E9CC /* MA in Resources */ = {isa = PBXBuildFile; fileRef = E1B2D9281C16C09F00A9E9CC /* MA */; };
 		E1B2D92B1C16C12100A9E9CC /* MACD in Resources */ = {isa = PBXBuildFile; fileRef = E1B2D92A1C16C12100A9E9CC /* MACD */; };
@@ -27,6 +25,8 @@
 		E1B2D92F1C16C15C00A9E9CC /* RSI in Resources */ = {isa = PBXBuildFile; fileRef = E1B2D92E1C16C15C00A9E9CC /* RSI */; };
 		E1B2D93E1C16E1C400A9E9CC /* DetailInfo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B2D93B1C16E1C400A9E9CC /* DetailInfo+CoreDataProperties.m */; };
 		E1B2D93F1C16E1C400A9E9CC /* DetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B2D93D1C16E1C400A9E9CC /* DetailInfo.m */; };
+		E1C798D91C170E40001FBDFE /* Forecast+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C798D61C170E40001FBDFE /* Forecast+CoreDataProperties.m */; };
+		E1C798DA1C170E40001FBDFE /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C798D81C170E40001FBDFE /* Forecast.m */; };
 		E1E417921C156851004D60B3 /* code.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1E417911C156851004D60B3 /* code.plist */; };
 /* End PBXBuildFile section */
 
@@ -50,10 +50,6 @@
 		E15A1C3B1C16A42B00ED204D /* Stock+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Stock+CoreDataProperties.m"; sourceTree = "<group>"; };
 		E15A1C3C1C16A42B00ED204D /* Stock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stock.h; sourceTree = "<group>"; };
 		E15A1C3D1C16A42B00ED204D /* Stock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stock.m; sourceTree = "<group>"; };
-		E15A1C3E1C16A42B00ED204D /* Forecast+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Forecast+CoreDataProperties.h"; sourceTree = "<group>"; };
-		E15A1C3F1C16A42B00ED204D /* Forecast+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Forecast+CoreDataProperties.m"; sourceTree = "<group>"; };
-		E15A1C401C16A42B00ED204D /* Forecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Forecast.h; sourceTree = "<group>"; };
-		E15A1C411C16A42B00ED204D /* Forecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Forecast.m; sourceTree = "<group>"; };
 		E1B2D8EE1C16B58D00A9E9CC /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		E1B2D8EF1C16B58D00A9E9CC /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		E1B2D9281C16C09F00A9E9CC /* MA */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MA; sourceTree = "<group>"; };
@@ -64,6 +60,10 @@
 		E1B2D93B1C16E1C400A9E9CC /* DetailInfo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DetailInfo+CoreDataProperties.m"; sourceTree = "<group>"; };
 		E1B2D93C1C16E1C400A9E9CC /* DetailInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailInfo.h; sourceTree = "<group>"; };
 		E1B2D93D1C16E1C400A9E9CC /* DetailInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailInfo.m; sourceTree = "<group>"; };
+		E1C798D51C170E40001FBDFE /* Forecast+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Forecast+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E1C798D61C170E40001FBDFE /* Forecast+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Forecast+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E1C798D71C170E40001FBDFE /* Forecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Forecast.h; sourceTree = "<group>"; };
+		E1C798D81C170E40001FBDFE /* Forecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Forecast.m; sourceTree = "<group>"; };
 		E1E417911C156851004D60B3 /* code.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = code.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +166,10 @@
 		E1E417B11C158ED6004D60B3 /* CoreDataModel */ = {
 			isa = PBXGroup;
 			children = (
+				E1C798D51C170E40001FBDFE /* Forecast+CoreDataProperties.h */,
+				E1C798D61C170E40001FBDFE /* Forecast+CoreDataProperties.m */,
+				E1C798D71C170E40001FBDFE /* Forecast.h */,
+				E1C798D81C170E40001FBDFE /* Forecast.m */,
 				E1B2D93A1C16E1C400A9E9CC /* DetailInfo+CoreDataProperties.h */,
 				E1B2D93B1C16E1C400A9E9CC /* DetailInfo+CoreDataProperties.m */,
 				E1B2D93C1C16E1C400A9E9CC /* DetailInfo.h */,
@@ -174,10 +178,6 @@
 				E15A1C3B1C16A42B00ED204D /* Stock+CoreDataProperties.m */,
 				E15A1C3C1C16A42B00ED204D /* Stock.h */,
 				E15A1C3D1C16A42B00ED204D /* Stock.m */,
-				E15A1C3E1C16A42B00ED204D /* Forecast+CoreDataProperties.h */,
-				E15A1C3F1C16A42B00ED204D /* Forecast+CoreDataProperties.m */,
-				E15A1C401C16A42B00ED204D /* Forecast.h */,
-				E15A1C411C16A42B00ED204D /* Forecast.m */,
 			);
 			path = CoreDataModel;
 			sourceTree = "<group>";
@@ -258,9 +258,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1B2D93F1C16E1C400A9E9CC /* DetailInfo.m in Sources */,
-				E15A1C471C16A42B00ED204D /* Forecast.m in Sources */,
 				E11241D31C1550BD008E45CA /* ModelCenter.m in Sources */,
+				E1C798D91C170E40001FBDFE /* Forecast+CoreDataProperties.m in Sources */,
 				E103681B1C11D65E003FE18C /* ViewController.m in Sources */,
+				E1C798DA1C170E40001FBDFE /* Forecast.m in Sources */,
 				E15A1C451C16A42B00ED204D /* Stock.m in Sources */,
 				E10368181C11D65E003FE18C /* AppDelegate.m in Sources */,
 				E1B2D8F01C16B58D00A9E9CC /* CoreDataManager.m in Sources */,
@@ -268,7 +269,6 @@
 				E15A1C441C16A42B00ED204D /* Stock+CoreDataProperties.m in Sources */,
 				E1B2D93E1C16E1C400A9E9CC /* DetailInfo+CoreDataProperties.m in Sources */,
 				E10368151C11D65E003FE18C /* main.m in Sources */,
-				E15A1C461C16A42B00ED204D /* Forecast+CoreDataProperties.m in Sources */,
 				E103682F1C11D6C4003FE18C /* WTNetWorkManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

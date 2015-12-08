@@ -14,8 +14,11 @@
 @implementation Forecast (CoreDataProperties)
 
 @dynamic code;
-@dynamic isbuy;
 @dynamic success;
-@dynamic time;
+@dynamic forecastTime;
+@dynamic reviewPrice;
+@dynamic forecastscore;
+@dynamic reviewTime;
+@dynamic forecastPrice;
 
 @end
