@@ -20,6 +20,7 @@
 		E15A1C451C16A42B00ED204D /* Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = E15A1C3D1C16A42B00ED204D /* Stock.m */; };
 		E15A1C461C16A42B00ED204D /* Forecast+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E15A1C3F1C16A42B00ED204D /* Forecast+CoreDataProperties.m */; };
 		E15A1C471C16A42B00ED204D /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = E15A1C411C16A42B00ED204D /* Forecast.m */; };
+		E1B2D8F01C16B58D00A9E9CC /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B2D8EF1C16B58D00A9E9CC /* CoreDataManager.m */; };
 		E1E417921C156851004D60B3 /* code.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1E417911C156851004D60B3 /* code.plist */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,8 @@
 		E15A1C3F1C16A42B00ED204D /* Forecast+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Forecast+CoreDataProperties.m"; sourceTree = "<group>"; };
 		E15A1C401C16A42B00ED204D /* Forecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Forecast.h; sourceTree = "<group>"; };
 		E15A1C411C16A42B00ED204D /* Forecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Forecast.m; sourceTree = "<group>"; };
+		E1B2D8EE1C16B58D00A9E9CC /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		E1B2D8EF1C16B58D00A9E9CC /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		E1E417911C156851004D60B3 /* code.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = code.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +89,8 @@
 				E10368171C11D65E003FE18C /* AppDelegate.m */,
 				E11241D11C1550BD008E45CA /* ModelCenter.h */,
 				E11241D21C1550BD008E45CA /* ModelCenter.m */,
+				E1B2D8EE1C16B58D00A9E9CC /* CoreDataManager.h */,
+				E1B2D8EF1C16B58D00A9E9CC /* CoreDataManager.m */,
 				E10368191C11D65E003FE18C /* ViewController.h */,
 				E103681A1C11D65E003FE18C /* ViewController.m */,
 				E103682D1C11D6C4003FE18C /* WTNetWorkManager.h */,
@@ -199,6 +204,7 @@
 				E103681B1C11D65E003FE18C /* ViewController.m in Sources */,
 				E15A1C451C16A42B00ED204D /* Stock.m in Sources */,
 				E10368181C11D65E003FE18C /* AppDelegate.m in Sources */,
+				E1B2D8F01C16B58D00A9E9CC /* CoreDataManager.m in Sources */,
 				E10368211C11D65E003FE18C /* Money.xcdatamodeld in Sources */,
 				E15A1C441C16A42B00ED204D /* Stock+CoreDataProperties.m in Sources */,
 				E10368151C11D65E003FE18C /* main.m in Sources */,
