@@ -15,6 +15,15 @@
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @end
 @implementation CoreDataManager
+static CoreDataManager *manager = nil;
++(instancetype)sharedManager
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        manager = [[CoreDataManager alloc] init];
+    });
+    return manager;
+}
 - (instancetype)init
 {
     self = [super init];

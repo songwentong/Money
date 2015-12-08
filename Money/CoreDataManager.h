@@ -13,4 +13,9 @@
 @property (readonly, nonatomic,strong) NSOperationQueue *operationQueue;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+
+
+//单例类
++(instancetype)sharedManager;
 @end
