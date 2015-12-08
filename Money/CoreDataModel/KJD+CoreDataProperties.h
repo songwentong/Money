@@ -1,5 +1,5 @@
 //
-//  Forecast+CoreDataProperties.h
+//  KJD+CoreDataProperties.h
 //  Money
 //
 //  Created by SongWentong on 12/8/15.
@@ -9,16 +9,18 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "Forecast.h"
+#import "KJD.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Forecast (CoreDataProperties)
+@interface KJD (CoreDataProperties)
 
 @property (nullable, nonatomic, retain) NSNumber *code;
-@property (nullable, nonatomic, retain) NSDate *time;
-@property (nullable, nonatomic, retain) NSNumber *isbuy;
-@property (nullable, nonatomic, retain) NSNumber *success;
+@property (nullable, nonatomic, retain) NSNumber *d;
+@property (nullable, nonatomic, retain) NSDate *date;
+@property (nullable, nonatomic, retain) NSNumber *j;
+@property (nullable, nonatomic, retain) NSNumber *k;
+@property (nullable, nonatomic, retain) UNKNOWN_TYPEprice;
 
 @end
 
