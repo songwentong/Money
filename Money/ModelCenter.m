@@ -35,6 +35,25 @@ static ModelCenter *center = nil;
     return [dict valueForKey:@"SZ"];
 }
 
+
+-(void)daliyUpdate
+{
+    NSDate *date = [NSDate date];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *string = [formatter stringFromDate:date];
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    if (![standardUserDefaults boolForKey:string]) {
+        
+        [self updateAllDataWithComplection:^{
+            [standardUserDefaults setBool:YES forKey:string];
+            [standardUserDefaults synchronize];
+        }];
+        
+    }
+}
+
+
 //更新所有数据
 -(void)updateAllDataWithComplection:(dispatch_block_t)complection
 {

@@ -25,9 +25,10 @@
 //    [[ModelCenter sharedModelCenter] findKDJ];
 //    [[ModelCenter sharedModelCenter] findRSI];
 //    [[ModelCenter sharedModelCenter] updateAllData];
-    [[ModelCenter sharedModelCenter] updateAllDataWithComplection:^{
-        
-    }];
+//    [[ModelCenter sharedModelCenter] updateAllDataWithComplection:^{
+    
+//    }];
+    [[ModelCenter sharedModelCenter] daliyUpdate];
     [[ModelCenter sharedModelCenter] analysis];
     return YES;
 }

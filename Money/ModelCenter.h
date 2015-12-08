@@ -11,6 +11,8 @@
 @interface ModelCenter : NSObject
 +(instancetype)sharedModelCenter;
 
+//每日更新
+-(void)daliyUpdate;
 
 //更新所有数据
 -(void)updateAllDataWithComplection:(dispatch_block_t)complection;

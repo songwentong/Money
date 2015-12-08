@@ -97,19 +97,16 @@
 		E10368121C11D65E003FE18C /* Money */ = {
 			isa = PBXGroup;
 			children = (
+				E1B2D9381C16C42400A9E9CC /* CoreData */,
+				E1B2D9371C16C41B00A9E9CC /* Network */,
+				E1B2D9361C16C40400A9E9CC /* CatchData */,
 				E1B2D9271C16C03600A9E9CC /* 股票知识 */,
 				E1E417B11C158ED6004D60B3 /* CoreDataModel */,
 				E1E417911C156851004D60B3 /* code.plist */,
 				E10368161C11D65E003FE18C /* AppDelegate.h */,
 				E10368171C11D65E003FE18C /* AppDelegate.m */,
-				E11241D11C1550BD008E45CA /* ModelCenter.h */,
-				E11241D21C1550BD008E45CA /* ModelCenter.m */,
-				E1B2D8EE1C16B58D00A9E9CC /* CoreDataManager.h */,
-				E1B2D8EF1C16B58D00A9E9CC /* CoreDataManager.m */,
 				E10368191C11D65E003FE18C /* ViewController.h */,
 				E103681A1C11D65E003FE18C /* ViewController.m */,
-				E103682D1C11D6C4003FE18C /* WTNetWorkManager.h */,
-				E103682E1C11D6C4003FE18C /* WTNetWorkManager.m */,
 				E103681C1C11D65E003FE18C /* Main.storyboard */,
 				E10368221C11D65E003FE18C /* Assets.xcassets */,
 				E10368241C11D65E003FE18C /* LaunchScreen.storyboard */,
@@ -137,6 +134,33 @@
 				E1B2D92E1C16C15C00A9E9CC /* RSI */,
 			);
 			name = "股票知识";
+			sourceTree = "<group>";
+		};
+		E1B2D9361C16C40400A9E9CC /* CatchData */ = {
+			isa = PBXGroup;
+			children = (
+				E11241D11C1550BD008E45CA /* ModelCenter.h */,
+				E11241D21C1550BD008E45CA /* ModelCenter.m */,
+			);
+			name = CatchData;
+			sourceTree = "<group>";
+		};
+		E1B2D9371C16C41B00A9E9CC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E103682D1C11D6C4003FE18C /* WTNetWorkManager.h */,
+				E103682E1C11D6C4003FE18C /* WTNetWorkManager.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		E1B2D9381C16C42400A9E9CC /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E1B2D8EE1C16B58D00A9E9CC /* CoreDataManager.h */,
+				E1B2D8EF1C16B58D00A9E9CC /* CoreDataManager.m */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		E1E417B11C158ED6004D60B3 /* CoreDataModel */ = {
