@@ -9,6 +9,7 @@
         <attribute name="ma5" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="ma10" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="ma20" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="macd" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="rsi6" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="rsi12" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -31,6 +32,6 @@
     <elements>
         <element name="Forecast" positionX="-63" positionY="27" width="128" height="105"/>
         <element name="Stock" positionX="-63" positionY="-18" width="128" height="135"/>
-        <element name="DetailInfo" positionX="-54" positionY="117" width="128" height="225"/>
+        <element name="DetailInfo" positionX="-54" positionY="117" width="128" height="240"/>
     </elements>
 </model>

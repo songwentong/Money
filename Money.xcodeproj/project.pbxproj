@@ -23,6 +23,10 @@
 		E1B2D8F01C16B58D00A9E9CC /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B2D8EF1C16B58D00A9E9CC /* CoreDataManager.m */; };
 		E1B2D9251C16BFCD00A9E9CC /* DetailInfo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B2D9221C16BFCD00A9E9CC /* DetailInfo+CoreDataProperties.m */; };
 		E1B2D9261C16BFCD00A9E9CC /* DetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B2D9241C16BFCD00A9E9CC /* DetailInfo.m */; };
+		E1B2D9291C16C09F00A9E9CC /* MA in Resources */ = {isa = PBXBuildFile; fileRef = E1B2D9281C16C09F00A9E9CC /* MA */; };
+		E1B2D92B1C16C12100A9E9CC /* MACD in Resources */ = {isa = PBXBuildFile; fileRef = E1B2D92A1C16C12100A9E9CC /* MACD */; };
+		E1B2D92D1C16C14600A9E9CC /* KDJ in Resources */ = {isa = PBXBuildFile; fileRef = E1B2D92C1C16C14600A9E9CC /* KDJ */; };
+		E1B2D92F1C16C15C00A9E9CC /* RSI in Resources */ = {isa = PBXBuildFile; fileRef = E1B2D92E1C16C15C00A9E9CC /* RSI */; };
 		E1E417921C156851004D60B3 /* code.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1E417911C156851004D60B3 /* code.plist */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +60,10 @@
 		E1B2D9221C16BFCD00A9E9CC /* DetailInfo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DetailInfo+CoreDataProperties.m"; path = "../../DetailInfo+CoreDataProperties.m"; sourceTree = "<group>"; };
 		E1B2D9231C16BFCD00A9E9CC /* DetailInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailInfo.h; path = ../../DetailInfo.h; sourceTree = "<group>"; };
 		E1B2D9241C16BFCD00A9E9CC /* DetailInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailInfo.m; path = ../../DetailInfo.m; sourceTree = "<group>"; };
+		E1B2D9281C16C09F00A9E9CC /* MA */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MA; sourceTree = "<group>"; };
+		E1B2D92A1C16C12100A9E9CC /* MACD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MACD; sourceTree = "<group>"; };
+		E1B2D92C1C16C14600A9E9CC /* KDJ */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KDJ; sourceTree = "<group>"; };
+		E1B2D92E1C16C15C00A9E9CC /* RSI */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RSI; sourceTree = "<group>"; };
 		E1E417911C156851004D60B3 /* code.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = code.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +97,7 @@
 		E10368121C11D65E003FE18C /* Money */ = {
 			isa = PBXGroup;
 			children = (
+				E1B2D9271C16C03600A9E9CC /* 股票知识 */,
 				E1E417B11C158ED6004D60B3 /* CoreDataModel */,
 				E1E417911C156851004D60B3 /* code.plist */,
 				E10368161C11D65E003FE18C /* AppDelegate.h */,
@@ -117,6 +126,17 @@
 				E10368141C11D65E003FE18C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1B2D9271C16C03600A9E9CC /* 股票知识 */ = {
+			isa = PBXGroup;
+			children = (
+				E1B2D9281C16C09F00A9E9CC /* MA */,
+				E1B2D92A1C16C12100A9E9CC /* MACD */,
+				E1B2D92C1C16C14600A9E9CC /* KDJ */,
+				E1B2D92E1C16C15C00A9E9CC /* RSI */,
+			);
+			name = "股票知识";
 			sourceTree = "<group>";
 		};
 		E1E417B11C158ED6004D60B3 /* CoreDataModel */ = {
@@ -195,10 +215,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B2D9291C16C09F00A9E9CC /* MA in Resources */,
+				E1B2D92F1C16C15C00A9E9CC /* RSI in Resources */,
+				E1B2D92D1C16C14600A9E9CC /* KDJ in Resources */,
 				E10368261C11D65E003FE18C /* LaunchScreen.storyboard in Resources */,
 				E10368231C11D65E003FE18C /* Assets.xcassets in Resources */,
 				E103681E1C11D65E003FE18C /* Main.storyboard in Resources */,
 				E1E417921C156851004D60B3 /* code.plist in Resources */,
+				E1B2D92B1C16C12100A9E9CC /* MACD in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
