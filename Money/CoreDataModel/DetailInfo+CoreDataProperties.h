@@ -17,19 +17,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, retain) NSNumber *code;
 @property (nullable, nonatomic, retain) NSNumber *d;
-@property (nullable, nonatomic, retain) NSDate *date;
+@property (nullable, nonatomic, retain) NSString *date;
+@property (nullable, nonatomic, retain) NSNumber *dea;
+@property (nullable, nonatomic, retain) NSNumber *diff;
 @property (nullable, nonatomic, retain) NSNumber *j;
 @property (nullable, nonatomic, retain) NSNumber *k;
 @property (nullable, nonatomic, retain) NSNumber *ma5;
 @property (nullable, nonatomic, retain) NSNumber *ma10;
 @property (nullable, nonatomic, retain) NSNumber *ma20;
+@property (nullable, nonatomic, retain) NSNumber *macd;
 @property (nullable, nonatomic, retain) NSNumber *price;
 @property (nullable, nonatomic, retain) NSNumber *rsi6;
 @property (nullable, nonatomic, retain) NSNumber *rsi12;
 @property (nullable, nonatomic, retain) NSNumber *rsi24;
-@property (nullable, nonatomic, retain) NSNumber *macd;
-@property (nullable, nonatomic, retain) NSNumber *diff;
-@property (nullable, nonatomic, retain) NSNumber *dea;
 
 @end
 

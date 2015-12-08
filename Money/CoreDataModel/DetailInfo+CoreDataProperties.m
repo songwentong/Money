@@ -16,17 +16,17 @@
 @dynamic code;
 @dynamic d;
 @dynamic date;
+@dynamic dea;
+@dynamic diff;
 @dynamic j;
 @dynamic k;
 @dynamic ma5;
 @dynamic ma10;
 @dynamic ma20;
+@dynamic macd;
 @dynamic price;
 @dynamic rsi6;
 @dynamic rsi12;
 @dynamic rsi24;
-@dynamic macd;
-@dynamic diff;
-@dynamic dea;
 
 @end

@@ -35,6 +35,10 @@ static ModelCenter *center = nil;
     return [dict valueForKey:@"SZ"];
 }
 
+/*!
+    关于数据抓取
+    目前抓取的全是日K线,包括MACD,MA,KDJ和RSI
+ */
 
 -(void)daliyUpdate
 {
