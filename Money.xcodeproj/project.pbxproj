@@ -97,8 +97,7 @@
 		E10368121C11D65E003FE18C /* Money */ = {
 			isa = PBXGroup;
 			children = (
-				E1B2D9381C16C42400A9E9CC /* CoreData */,
-				E1B2D9371C16C41B00A9E9CC /* Network */,
+				E10D821A1C17177400DD420F /* Vendors */,
 				E1B2D9361C16C40400A9E9CC /* CatchData */,
 				E1B2D9271C16C03600A9E9CC /* 股票知识 */,
 				E1E417B11C158ED6004D60B3 /* CoreDataModel */,
@@ -123,6 +122,15 @@
 				E10368141C11D65E003FE18C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E10D821A1C17177400DD420F /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				E1B2D9381C16C42400A9E9CC /* CoreData */,
+				E1B2D9371C16C41B00A9E9CC /* Network */,
+			);
+			name = Vendors;
 			sourceTree = "<group>";
 		};
 		E1B2D9271C16C03600A9E9CC /* 股票知识 */ = {
