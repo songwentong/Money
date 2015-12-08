@@ -15,9 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Forecast (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) UNKNOWN_TYPEattribute;
-@property (nullable, nonatomic, retain) UNKNOWN_TYPEattribute1;
-@property (nullable, nonatomic, retain) UNKNOWN_TYPEattribute2;
+
 @property (nullable, nonatomic, retain) NSNumber *code;
 @property (nullable, nonatomic, retain) NSNumber *isbuy;
 @property (nullable, nonatomic, retain) NSNumber *success;

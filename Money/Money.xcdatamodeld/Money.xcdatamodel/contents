@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Automatic">
     <entity name="Forecast" representedClassName="Forecast" syncable="YES">
-        <attribute name="attribute" optional="YES" syncable="YES"/>
-        <attribute name="attribute1" optional="YES" syncable="YES"/>
-        <attribute name="attribute2" optional="YES" syncable="YES"/>
         <attribute name="code" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="isbuy" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="success" optional="YES" attributeType="Boolean" syncable="YES"/>
@@ -18,7 +15,7 @@
         <attribute name="rsi" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Forecast" positionX="-63" positionY="27" width="128" height="150"/>
+        <element name="Forecast" positionX="-63" positionY="27" width="128" height="105"/>
         <element name="Stock" positionX="-63" positionY="-18" width="128" height="135"/>
     </elements>
 </model>

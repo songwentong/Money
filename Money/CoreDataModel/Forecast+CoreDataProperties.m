@@ -13,9 +13,6 @@
 
 @implementation Forecast (CoreDataProperties)
 
-@dynamic attribute;
-@dynamic attribute1;
-@dynamic attribute2;
 @dynamic code;
 @dynamic isbuy;
 @dynamic success;
