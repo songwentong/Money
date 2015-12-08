@@ -27,6 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSNumber *rsi6;
 @property (nullable, nonatomic, retain) NSNumber *rsi12;
 @property (nullable, nonatomic, retain) NSNumber *rsi24;
+@property (nullable, nonatomic, retain) NSNumber *macd;
+@property (nullable, nonatomic, retain) NSNumber *diff;
+@property (nullable, nonatomic, retain) NSNumber *dea;
 
 @end
 

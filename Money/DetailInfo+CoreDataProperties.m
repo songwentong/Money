@@ -25,5 +25,8 @@
 @dynamic rsi6;
 @dynamic rsi12;
 @dynamic rsi24;
+@dynamic macd;
+@dynamic diff;
+@dynamic dea;
 
 @end
