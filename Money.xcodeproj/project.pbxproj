@@ -16,8 +16,6 @@
 		E10368261C11D65E003FE18C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10368241C11D65E003FE18C /* LaunchScreen.storyboard */; };
 		E103682F1C11D6C4003FE18C /* WTNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E103682E1C11D6C4003FE18C /* WTNetWorkManager.m */; };
 		E11241D31C1550BD008E45CA /* ModelCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = E11241D21C1550BD008E45CA /* ModelCenter.m */; };
-		E15A1C421C16A42B00ED204D /* KJD+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E15A1C371C16A42B00ED204D /* KJD+CoreDataProperties.m */; };
-		E15A1C431C16A42B00ED204D /* KJD.m in Sources */ = {isa = PBXBuildFile; fileRef = E15A1C391C16A42B00ED204D /* KJD.m */; };
 		E15A1C441C16A42B00ED204D /* Stock+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E15A1C3B1C16A42B00ED204D /* Stock+CoreDataProperties.m */; };
 		E15A1C451C16A42B00ED204D /* Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = E15A1C3D1C16A42B00ED204D /* Stock.m */; };
 		E15A1C461C16A42B00ED204D /* Forecast+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E15A1C3F1C16A42B00ED204D /* Forecast+CoreDataProperties.m */; };
@@ -41,10 +39,6 @@
 		E103682E1C11D6C4003FE18C /* WTNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTNetWorkManager.m; sourceTree = "<group>"; };
 		E11241D11C1550BD008E45CA /* ModelCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelCenter.h; sourceTree = "<group>"; };
 		E11241D21C1550BD008E45CA /* ModelCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelCenter.m; sourceTree = "<group>"; };
-		E15A1C361C16A42B00ED204D /* KJD+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KJD+CoreDataProperties.h"; sourceTree = "<group>"; };
-		E15A1C371C16A42B00ED204D /* KJD+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KJD+CoreDataProperties.m"; sourceTree = "<group>"; };
-		E15A1C381C16A42B00ED204D /* KJD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJD.h; sourceTree = "<group>"; };
-		E15A1C391C16A42B00ED204D /* KJD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJD.m; sourceTree = "<group>"; };
 		E15A1C3A1C16A42B00ED204D /* Stock+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Stock+CoreDataProperties.h"; sourceTree = "<group>"; };
 		E15A1C3B1C16A42B00ED204D /* Stock+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Stock+CoreDataProperties.m"; sourceTree = "<group>"; };
 		E15A1C3C1C16A42B00ED204D /* Stock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stock.h; sourceTree = "<group>"; };
@@ -117,10 +111,6 @@
 		E1E417B11C158ED6004D60B3 /* CoreDataModel */ = {
 			isa = PBXGroup;
 			children = (
-				E15A1C361C16A42B00ED204D /* KJD+CoreDataProperties.h */,
-				E15A1C371C16A42B00ED204D /* KJD+CoreDataProperties.m */,
-				E15A1C381C16A42B00ED204D /* KJD.h */,
-				E15A1C391C16A42B00ED204D /* KJD.m */,
 				E15A1C3A1C16A42B00ED204D /* Stock+CoreDataProperties.h */,
 				E15A1C3B1C16A42B00ED204D /* Stock+CoreDataProperties.m */,
 				E15A1C3C1C16A42B00ED204D /* Stock.h */,
@@ -206,9 +196,7 @@
 			files = (
 				E15A1C471C16A42B00ED204D /* Forecast.m in Sources */,
 				E11241D31C1550BD008E45CA /* ModelCenter.m in Sources */,
-				E15A1C431C16A42B00ED204D /* KJD.m in Sources */,
 				E103681B1C11D65E003FE18C /* ViewController.m in Sources */,
-				E15A1C421C16A42B00ED204D /* KJD+CoreDataProperties.m in Sources */,
 				E15A1C451C16A42B00ED204D /* Stock.m in Sources */,
 				E10368181C11D65E003FE18C /* AppDelegate.m in Sources */,
 				E10368211C11D65E003FE18C /* Money.xcdatamodeld in Sources */,

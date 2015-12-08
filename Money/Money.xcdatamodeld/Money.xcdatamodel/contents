@@ -9,14 +9,6 @@
         <attribute name="success" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
-    <entity name="KJD" representedClassName="KJD" syncable="YES">
-        <attribute name="code" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="d" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="j" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="k" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="price" optional="YES" syncable="YES"/>
-    </entity>
     <entity name="Stock" representedClassName="Stock" syncable="YES">
         <attribute name="code" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="d" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -27,7 +19,6 @@
     </entity>
     <elements>
         <element name="Forecast" positionX="-63" positionY="27" width="128" height="150"/>
-        <element name="KJD" positionX="-63" positionY="36" width="128" height="135"/>
         <element name="Stock" positionX="-63" positionY="-18" width="128" height="135"/>
     </elements>
 </model>
