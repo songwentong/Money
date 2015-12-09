@@ -132,6 +132,15 @@ static ModelCenter *center = nil;
                         
                         
                         [_array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                            
+                            NSLog(@"存了%ld条数据",idx);
+                            
+                            if (idx%20==0) {
+                                if ([context hasChanges]) {
+                                    [context save:nil];
+                                }
+                            }
+                            
                             NSArray *data = [obj valueForKey:@"data"];
                             if (data.count>2) {
                                 
