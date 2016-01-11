@@ -62,7 +62,7 @@ static ModelCenter *center = nil;
 //更新所有数据
 -(void)updateAllDataWithComplection:(dispatch_block_t)complection
 {
-    [self findMACDAndComplection:^{
+//    [self findMACDAndComplection:^{
         /*
         [self findKDJAndComplection:^{
             [self findRSIAndComplection:^{
@@ -72,10 +72,96 @@ static ModelCenter *center = nil;
             }];
         }];
          */
+//    }];
+//    [self findAllMACDInfoComplection:^(NSMutableDictionary *result) {
+//        NSLog(@"%@",result);
+//    }];
+    [self findAllStockWithType:@"MACD" complection:^(NSMutableDictionary *macdData) {
+//        NSLog(@"%@",allData);
+        [self findAllStockWithType:@"KDJ" complection:^(NSMutableDictionary *kdjData) {
+            
+            [self findAllStockWithType:@"RSI" complection:^(NSMutableDictionary *rsiData) {
+                
+            }];
+        }];
     }];
     
-    
 }
+
+
+-(void)findStockWithType:(NSString*)type code:(NSString*)code complection:(void(^)(NSArray *result))complection
+{
+    NSString *url = [NSString stringWithFormat:@"http://proxy.finance.qq.com/ifzqgtimg/appstock/indicators/%@/D1",type];
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    [parameters setValue:@"SZ" forKey:@"market"];
+    [parameters setValue:@"12-26-9" forKey:@"args"];
+    [parameters setValue:code forKey:@"code"];
+    NSMutableURLRequest *request = [[WTNetWorkManager sharedKit] requestWithMethod:@"GET" URLString:url parameters:parameters error:nil];
+    [request setValue:@"aaa" forHTTPHeaderField:@"aaa"];
+    [[[WTNetWorkManager sharedKit].session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
+      {
+          
+          NSArray *stockData = [NSArray array];
+          if (data) {
+              NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+              stockData = [dict valueForKey:@"data"];
+          }
+          if (complection) {
+              complection(stockData);
+          }
+      }] resume];
+}
+
+-(void)findAllStockWithType:(NSString *)type complection:(void(^)(NSMutableDictionary *allData))complection
+{
+    NSArray<NSString*> *szCodes = [[self class] readSZCode];
+    NSMutableDictionary *finalResult = [NSMutableDictionary dictionary];
+    
+    NSInteger count = szCodes.count;
+    __block NSInteger complectionCount = 0;
+    
+    [szCodes enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self findStockWithType:type code:obj complection:^(NSArray *result) {
+            complectionCount = complectionCount + 1;
+            [finalResult setValue:result forKey:obj];
+            NSLog(@"complection :%ld  count :%ld",complectionCount,count);
+            if (complectionCount == count) {
+                if (complection) {
+                    complection(finalResult);
+                }
+            }
+        }];
+        
+        
+    }];
+}
+
+-(void)findAllMACDInfoComplection:(void(^)(NSMutableDictionary *allMACDData))complection
+{
+    
+
+    NSArray<NSString*> *szCodes = [[self class] readSZCode];
+    NSMutableDictionary *finalResult = [NSMutableDictionary dictionary];
+    
+    NSInteger count = szCodes.count;
+    __block NSInteger complectionCount = 0;
+
+    [szCodes enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self findStockWithType:@"MACD" code:obj complection:^(NSArray *result) {
+            complectionCount = complectionCount + 1;
+            [finalResult setValue:result forKey:obj];
+            NSLog(@"complection :%ld  count :%ld",complectionCount,count);
+            if (complectionCount == count) {
+                if (complection) {
+                    complection(finalResult);
+                }
+            }
+        }];
+        
+
+    }];
+}
+
 
 -(void)findMACDAndComplection:(dispatch_block_t)complection
 {
