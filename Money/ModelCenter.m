@@ -76,14 +76,20 @@ static ModelCenter *center = nil;
 //    [self findAllMACDInfoComplection:^(NSMutableDictionary *result) {
 //        NSLog(@"%@",result);
 //    }];
+/*
     [self findAllStockWithType:@"MACD" complection:^(NSMutableDictionary *macdData) {
-//        NSLog(@"%@",allData);
+
         [self findAllStockWithType:@"KDJ" complection:^(NSMutableDictionary *kdjData) {
             
             [self findAllStockWithType:@"RSI" complection:^(NSMutableDictionary *rsiData) {
                 
             }];
         }];
+    }];
+ */
+    
+    [self findAllPriceDataComplection:^(NSDictionary *result) {
+        
     }];
     
 }
@@ -133,6 +139,45 @@ static ModelCenter *center = nil;
         }];
         
         
+    }];
+}
+
+
+
+-(void)findPriceDataWithCode:(NSString*)code complection:(void(^)(NSArray *result))complection
+{
+    
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    [parameters setValue:[NSString stringWithFormat:@"%@,day,,,320,qfq",code] forKey:@"param"];
+    
+    NSMutableURLRequest *request = [[WTNetWorkManager sharedKit] requestWithMethod:@"GET" URLString:@"http://proxy.finance.qq.com/ifzqgtimg/appstock/app/fqkline/get" parameters:parameters error:nil];
+    [[[WTNetWorkManager sharedKit].session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
+    {
+        NSDictionary *jsonObj = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        NSArray *array = [[[jsonObj valueForKey:@"data"] valueForKey:code] valueForKey:@"qfqday"];
+        if (complection) {
+            complection(array);
+        }
+    }] resume];
+}
+
+-(void)findAllPriceDataComplection:(void(^)(NSDictionary *result))complection
+{
+    NSArray<NSString*> *szCodes = [[self class] readSZCode];
+    NSMutableDictionary *finalResult = [NSMutableDictionary dictionary];
+    __block NSInteger complectionCount = 0;
+    [szCodes enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop)
+    {
+        NSString *code = [NSString stringWithFormat:@"sz%@",obj];
+        [self findPriceDataWithCode:code complection:^(NSArray *result) {
+            [finalResult setValue:result forKey:code];
+        }];
+        complectionCount = complectionCount + 1;
+        if (complectionCount==szCodes.count) {
+            if (complection) {
+                complection(finalResult);
+            }
+        }
     }];
 }
 
