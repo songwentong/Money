@@ -27,4 +27,14 @@
  */
 -(void)analysis;
 
+
+
+/*
+ 价格接口
+ http://proxy.finance.qq.com/ifzqgtimg/appstock/app/fqkline/get?p=1&param=sz002081,day,,,320,qfq&_rndtime=1449565003&_appName=ios&_dev=iPhone6,2&_devId=66c90aa82c1f94a1e87845a8ecb5f4be0dc80e55&_appver=4.2.0&_ifChId=&_isChId=1&_osVer=8.4&_uin=10000&_wxuin=20000
+ 
+ 
+ 类型参数的接口
+ http://proxy.finance.qq.com/ifzqgtimg/appstock/indicators/%@/D1
+ */
 @end
