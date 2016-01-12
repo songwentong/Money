@@ -88,9 +88,9 @@ static ModelCenter *center = nil;
     }];
  */
     
-    [self findAllPriceDataComplection:^(NSDictionary *result) {
-        
-    }];
+//    [self findAllPriceDataComplection:^(NSDictionary *result) {
+    
+//    }];
     
 }
 

@@ -15,6 +15,8 @@
 		E10368231C11D65E003FE18C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E10368221C11D65E003FE18C /* Assets.xcassets */; };
 		E10368261C11D65E003FE18C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10368241C11D65E003FE18C /* LaunchScreen.storyboard */; };
 		E103682F1C11D6C4003FE18C /* WTNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E103682E1C11D6C4003FE18C /* WTNetWorkManager.m */; };
+		E1091E321C45529A00FC74E6 /* BOLL in Resources */ = {isa = PBXBuildFile; fileRef = E1091E311C45529A00FC74E6 /* BOLL */; };
+		E1091E341C4552A100FC74E6 /* SAR in Resources */ = {isa = PBXBuildFile; fileRef = E1091E331C4552A100FC74E6 /* SAR */; };
 		E11241D31C1550BD008E45CA /* ModelCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = E11241D21C1550BD008E45CA /* ModelCenter.m */; };
 		E15A1C441C16A42B00ED204D /* Stock+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E15A1C3B1C16A42B00ED204D /* Stock+CoreDataProperties.m */; };
 		E15A1C451C16A42B00ED204D /* Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = E15A1C3D1C16A42B00ED204D /* Stock.m */; };
@@ -44,6 +46,8 @@
 		E10368271C11D65E003FE18C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E103682D1C11D6C4003FE18C /* WTNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTNetWorkManager.h; sourceTree = "<group>"; };
 		E103682E1C11D6C4003FE18C /* WTNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTNetWorkManager.m; sourceTree = "<group>"; };
+		E1091E311C45529A00FC74E6 /* BOLL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BOLL; sourceTree = "<group>"; };
+		E1091E331C4552A100FC74E6 /* SAR */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SAR; sourceTree = "<group>"; };
 		E11241D11C1550BD008E45CA /* ModelCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelCenter.h; sourceTree = "<group>"; };
 		E11241D21C1550BD008E45CA /* ModelCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelCenter.m; sourceTree = "<group>"; };
 		E15A1C3A1C16A42B00ED204D /* Stock+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Stock+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 				E1B2D92A1C16C12100A9E9CC /* MACD */,
 				E1B2D92C1C16C14600A9E9CC /* KDJ */,
 				E1B2D92E1C16C15C00A9E9CC /* RSI */,
+				E1091E311C45529A00FC74E6 /* BOLL */,
+				E1091E331C4552A100FC74E6 /* SAR */,
 			);
 			name = "股票知识";
 			sourceTree = "<group>";
@@ -249,10 +255,12 @@
 			files = (
 				E1B2D9291C16C09F00A9E9CC /* MA in Resources */,
 				E1B2D92F1C16C15C00A9E9CC /* RSI in Resources */,
+				E1091E321C45529A00FC74E6 /* BOLL in Resources */,
 				E1B2D92D1C16C14600A9E9CC /* KDJ in Resources */,
 				E10368261C11D65E003FE18C /* LaunchScreen.storyboard in Resources */,
 				E10368231C11D65E003FE18C /* Assets.xcassets in Resources */,
 				E103681E1C11D65E003FE18C /* Main.storyboard in Resources */,
+				E1091E341C4552A100FC74E6 /* SAR in Resources */,
 				E1E417921C156851004D60B3 /* code.plist in Resources */,
 				E1B2D92B1C16C12100A9E9CC /* MACD in Resources */,
 			);

@@ -1,0 +1,9 @@
+http://baike.baidu.com/subview/215614/5071972.htm#viewPageContent
+
+1.任何时候都可以使用SAR 为停损点；
+2.价格涨跌的速度必须比SAR 升降的速度快，否则必会产生停损信号；
+3.SAR 由红色变成绿色时，卖出；
+4.SAR 由绿色变成红色时，买进；
+5.本指标周期参数一般设定为4天；
+6.本设定主要为寻找出现多头停损或空头停损的个股。
+7.函数SAR(N,STEP,MAXP),CIRCLEDOT
