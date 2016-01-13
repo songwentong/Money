@@ -103,7 +103,7 @@
 			children = (
 				E10D821A1C17177400DD420F /* Vendors */,
 				E1B2D9361C16C40400A9E9CC /* CatchData */,
-				E1B2D9271C16C03600A9E9CC /* 股票知识 */,
+				E1B2D9271C16C03600A9E9CC /* knowledge */,
 				E1E417B11C158ED6004D60B3 /* CoreDataModel */,
 				E1E417911C156851004D60B3 /* code.plist */,
 				E10368161C11D65E003FE18C /* AppDelegate.h */,
@@ -137,7 +137,7 @@
 			name = Vendors;
 			sourceTree = "<group>";
 		};
-		E1B2D9271C16C03600A9E9CC /* 股票知识 */ = {
+		E1B2D9271C16C03600A9E9CC /* knowledge */ = {
 			isa = PBXGroup;
 			children = (
 				E1B2D9281C16C09F00A9E9CC /* MA */,
@@ -147,7 +147,7 @@
 				E1091E311C45529A00FC74E6 /* BOLL */,
 				E1091E331C4552A100FC74E6 /* SAR */,
 			);
-			name = "股票知识";
+			name = knowledge;
 			sourceTree = "<group>";
 		};
 		E1B2D9361C16C40400A9E9CC /* CatchData */ = {
