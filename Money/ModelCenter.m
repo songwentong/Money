@@ -255,90 +255,6 @@ static ModelCenter *center = nil;
             if (complectionCount==count) {
                 
                 
-                //解决在并发情况下的重复调用问题
-                static dispatch_once_t onceToken;
-                dispatch_once(&onceToken, ^{
-                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                        NSManagedObjectContext *context = [AppDelegate sharedDelegate].managedObjectContext;
-                        
-                        
-                        [_array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                            
-                            NSLog(@"存了%ld条数据",idx);
-                            
-                            if (idx%20==0) {
-                                if ([context hasChanges]) {
-                                    [context save:nil];
-                                }
-                            }
-                            
-                            NSArray *data = [obj valueForKey:@"data"];
-                            if (data.count>2) {
-                                
-                                __block NSInteger code = 0;
-                                [data enumerateObjectsUsingBlock:^(NSDictionary *obj1, NSUInteger idx, BOOL * _Nonnull stop) {
-                                    if (idx ==0) {
-                                        code = [[obj1 valueForKey:@"code"] integerValue];
-                                    }else{
-                                        CGFloat macd = [[obj1 valueForKey:@"MACD"] floatValue];
-                                        CGFloat dea = [[obj1 valueForKey:@"DEA"] floatValue];
-                                        CGFloat dif = [[obj1 valueForKey:@"DIF"] floatValue];
-                                        NSString *date = [obj1 valueForKey:@"DATE"];
-                                        
-                                        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"DetailInfo"];
-                                        request.predicate = [NSPredicate predicateWithFormat:@"code == %ld AND date == %@ ",code,date];
-                                        
-                                        NSError *error = nil;
-                                        NSArray *results = [context executeFetchRequest:request error:&error];
-                                        
-                                        //如果找到了对应的数据,就修改,没有找到了,就插入一条新数据
-                                        DetailInfo *detailInfo = nil;
-                                        if (results.count>0) {
-                                            
-                                            detailInfo = results.lastObject;
-                                            //                                NSLog(@"%@",NSStringFromClass([stock class]));
-                                        }else{
-                                            detailInfo = [NSEntityDescription insertNewObjectForEntityForName:@"DetailInfo" inManagedObjectContext:context];
-                                            detailInfo.date = date;
-                                            detailInfo.code = [NSNumber numberWithInteger:code];
-                                        }
-                                        detailInfo.dea = [NSNumber numberWithFloat:dea];
-                                        detailInfo.diff = [NSNumber numberWithFloat:dif];
-                                        detailInfo.macd = [NSNumber numberWithFloat:macd];
-
-                                        
-                                        
-                                        
-                                    }
-                                }];
-                                
-                                
-                                
-                            }
-                        }];
-                        if ([context save:nil]) {
-                            NSLog(@"保存成功");
-                        }else{
-                            NSLog(@"保存失败");
-                        }
-                        
-                        if (complection) {
-                            complection();
-                            NSTimeInterval time2 = [[NSDate date] timeIntervalSince1970];
-                            NSLog(@"查找MACD用时 %f",time2-time1);
-                        }
-                        
-                        
-                        NSLog(@"%@",NSHomeDirectory());
-                            
-                        
-                        
-                    }];
-                    
-                    
-                    
-                });
-                
                 
                 
             }
@@ -348,7 +264,7 @@ static ModelCenter *center = nil;
     
 }
 
--(void)findKDJAndComplection:(dispatch_block_t)complection
+-(void)findKDJAndComplection:(void (^)(NSArray*result))complection
 {
     NSMutableArray * _array = [[NSMutableArray alloc] init];
     // Do any additional setup after loading the view, typically from a nib.
@@ -391,73 +307,9 @@ static ModelCenter *center = nil;
             
             
             if (complectionCount==count) {
-                
-                
-                //解决在并发情况下的重复调用问题
-                static dispatch_once_t onceToken;
-                dispatch_once(&onceToken, ^{
-                    
-                    [_array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                        NSArray *data = [obj valueForKey:@"data"];
-                        if (data.count>2) {
-                            NSDictionary *firstObject = [data firstObject];
-                            NSDictionary *lastObject = data [data.count -2];
-                            
-                            
-                            NSInteger code = [[firstObject valueForKey:@"code"] integerValue];
-                            CGFloat K = [[lastObject valueForKey:@"K"] floatValue];
-                            CGFloat D = [[lastObject valueForKey:@"D"] floatValue];
-                            CGFloat J = [[lastObject valueForKey:@"J"] floatValue];
-                            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                                NSManagedObjectContext *context = [AppDelegate sharedDelegate].managedObjectContext;
-                                
-                                
-                                NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Stock"];
-                                request.predicate = [NSPredicate predicateWithFormat:@"code == %ld",code];
-                                //                            request.sortDescriptors =
-                                NSError *error = nil;
-                                NSArray *results = [context executeFetchRequest:request error:&error];
-                                
-                                //如果找到了对应的数据,就修改,没有找到了,就插入一条新数据
-                                Stock *stock = nil;
-                                if (results.count>0) {
-                                    
-                                    stock = results.lastObject;
-                                    //                                NSLog(@"%@",NSStringFromClass([stock class]));
-                                }else{
-                                    stock = [NSEntityDescription insertNewObjectForEntityForName:@"Stock" inManagedObjectContext:context];
-                                    
-                                }
-                                stock.code = [NSNumber numberWithInteger:code];
-                                stock.k = [NSNumber numberWithFloat:K];
-                                stock.d = [NSNumber numberWithFloat:D];
-                                stock.j = [NSNumber numberWithFloat:J];
-                                
-                                
-                                if ([context save:nil]) {
-                                    
-                                }
-                                if (complection) {
-                                    complection();
-                                }
-                                
-                            }];
-                            
-                            
-                        }
-                        
-                        if (idx==_array.count-1) {
-                            NSLog(@"%@",NSHomeDirectory());
-                        }
-                        
-                    }];
-                    
-                    
-                    
-                });
-                
-                
-                
+                if (complection) {
+                    complection(_array);
+                }
             }
         }] resume];
     }];
@@ -511,59 +363,6 @@ static ModelCenter *center = nil;
                 //解决在并发情况下的重复调用问题
                 static dispatch_once_t onceToken;
                 dispatch_once(&onceToken, ^{
-                    
-                    [_array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                        NSArray *data = [obj valueForKey:@"data"];
-                        if (data.count>2) {
-                            NSDictionary *firstObject = [data firstObject];
-                            NSDictionary *lastObject = data[data.count-2];
-                            
-                            
-                            NSInteger code = [[firstObject valueForKey:@"code"] integerValue];
-                            CGFloat RSI = [[lastObject valueForKey:@"RSI2"] floatValue];
-                            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                                NSManagedObjectContext *context = [AppDelegate sharedDelegate].managedObjectContext;
-                                
-                                
-                                NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Stock"];
-                                request.predicate = [NSPredicate predicateWithFormat:@"code == %ld",code];
-                                //                            request.sortDescriptors =
-                                NSError *error = nil;
-                                NSArray *results = [context executeFetchRequest:request error:&error];
-                                
-                                //如果找到了对应的数据,就修改,没有找到了,就插入一条新数据
-                                Stock *stock = nil;
-                                if (results.count>0) {
-                                    
-                                    stock = results.lastObject;
-                                    //                                NSLog(@"%@",NSStringFromClass([stock class]));
-                                }else{
-                                    stock = [NSEntityDescription insertNewObjectForEntityForName:@"Stock" inManagedObjectContext:context];
-                                    
-                                }
-                                stock.code = [NSNumber numberWithInteger:code];
-                                stock.rsi = [NSNumber numberWithFloat:RSI];
-                                
-                                
-                                if ([context save:nil]) {
-                                    
-                                }
-                                if (complection) {
-                                    complection();
-                                }
-                                
-                            }];
-                            
-                            
-                            
-                        }
-                        
-                        if (idx==_array.count-1) {
-                            NSLog(@"%@",NSHomeDirectory());
-                        }
-                        
-                    }];
-                    
                     
                     
                 });
